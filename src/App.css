@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  padding: 30px 0;
+  height: 50px;
+}
+
+.container-controls{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.container-ui{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+input{
+  color: white;
+  height: 25px;
+  font-size: 16px;
+}
+
+#container{
+  border: white solid 5px;
+  height: 300px;
+  width: 600px;
+}
+
+.value-controller{
+  text-align: center;
+  float: right;
+}
+
+.control-container{
+  width: 500px;
+}
+
+.value-controller-text{
+  padding: 5px 0;
+  float: left;
+}
