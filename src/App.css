@@ -31,19 +31,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 350px;
 }
 
 input{
   color: white;
   height: 25px;
   font-size: 16px;
-}
-
-#container{
-  border: white solid 5px;
-  height: 300px;
-  width: 600px;
 }
 
 .value-controller{
@@ -58,4 +52,15 @@ input{
 .value-controller-text{
   padding: 5px 0;
   float: left;
+}
+
+/*Button Changes*/
+
+button{
+  color: white;
+  font-size: 20px;
+}
+
+.copy-css-button-container{
+  margin: 25px 0;
 }

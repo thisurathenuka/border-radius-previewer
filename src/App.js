@@ -16,6 +16,20 @@ function App() {
         container.style.borderBottomRightRadius = bottomRight + "px"
     }
 
+    /**
+     * Has to create a hidden text area somewhere and copy the text from there
+     */
+    const copyContainerStyles = () =>{
+        let containerStyles = document.querySelector('#container').getAttribute("style")
+
+        navigator.clipboard.writeText(JSON.stringify(containerStyles)).then(function() {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+
+    }
+
     return (
         <div className="App">
             <header className="App-header">Border Radius Previewer</header>
@@ -73,8 +87,14 @@ function App() {
                     />
                 </div>
             </div>
+            <div className="copy-css-button-container">
+                <button className="copy-css-button" onClick={() => copyContainerStyles()}>
+                    <img src="https://img.icons8.com/material-outlined/48/000000/copy.png"/>
+                </button>
+
+            </div>
             <div class="container-ui">
-                <div id="container"></div>
+                <div id="container" style={{border: "white solid 5px", height:"300px", width:"600px"}}></div>
             </div>
         </div>
     );
