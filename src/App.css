@@ -62,5 +62,15 @@ button{
 }
 
 .copy-css-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 25px 0;
+}
+
+#code-copied-text{
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  align-self: center;
 }

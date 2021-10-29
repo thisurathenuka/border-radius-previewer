@@ -21,13 +21,23 @@ function App() {
      */
     const copyContainerStyles = () =>{
         let containerStyles = document.querySelector('#container').getAttribute("style")
-
         navigator.clipboard.writeText(JSON.stringify(containerStyles)).then(function() {
             console.log('Async: Copying to clipboard was successful!');
         }, function(err) {
             console.error('Async: Could not copy text: ', err);
         });
 
+        settingTimeout();
+
+    }
+
+    const settingTimeout = () => {
+        let text = document.getElementById("code-copied-text")
+        text.innerHTML = "Copied to the Clipboard"
+        setTimeout(function (){
+            text = document.getElementById("code-copied-text")
+            text.innerHTML = ""
+        }, 5000);
     }
 
     return (
@@ -91,7 +101,7 @@ function App() {
                 <button className="copy-css-button" onClick={() => copyContainerStyles()}>
                     <img src="https://img.icons8.com/material-outlined/48/000000/copy.png"/>
                 </button>
-
+                <div id="code-copied-text"></div>
             </div>
             <div class="container-ui">
                 <div id="container" style={{border: "white solid 5px", height:"300px", width:"600px"}}></div>
